@@ -9,6 +9,7 @@
         "preview": "astro preview"
     },
     "devDependencies": {
+        "@types/react": "^17.0.24",
         "astro": "^0.20.7"
     }
 }
