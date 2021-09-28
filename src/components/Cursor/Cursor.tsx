@@ -68,4 +68,6 @@ const Cursor = () => {
     );
 };
 
+Cursor.displayName = "Cursor";
+
 export default Cursor;
