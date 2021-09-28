@@ -27,5 +27,13 @@ module.exports = {
                 900: "#2b0c05",
             },
         },
+        extend: {
+            transitionProperty: {
+                cursor: "width, height, background-color",
+            },
+            zIndex: {
+                9999: 9999,
+            },
+        },
     },
 };
