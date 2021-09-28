@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 
-// Component Imports
+// Content Component Imports
 import Tour from '../components/Tour.astro';
 // You can import components from any supported Framework here!
 
+// Component Imports
 import Test from '../components/Test/Test.tsx';
 ---
 
@@ -20,6 +21,8 @@ import Test from '../components/Test/Test.tsx';
         <Test>Test React content - <a href="/">Link</a></Test>
 
         <Tour />
+
+        <div style="height: 2000px;">scroll content</div>
 
         <!--
            - You can also use imported framework components directly in your markup!
