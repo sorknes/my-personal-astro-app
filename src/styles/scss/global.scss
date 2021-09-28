@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    @apply text-coolGray-900 text-base font-pt-sans antialiased;
+    @apply text-coolGray-900 text-base font-pt-sans antialiased bg-coolGray-50;
 }
 
 @layer base {
