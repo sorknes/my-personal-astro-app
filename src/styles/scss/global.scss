@@ -8,15 +8,15 @@
 
 // 03. Global styles
 // ----------------------------------------------------------------------------
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    @apply text-coolGray-900 text-base font-pt-sans antialiased bg-coolGray-50;
-}
-
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply text-coolGray-900 text-base font-pt-sans antialiased bg-coolGray-50;
+    }
+
     // Heading
     h1,
     h2,
