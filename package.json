@@ -9,7 +9,13 @@
         "preview": "astro preview"
     },
     "devDependencies": {
+        "astro": "^0.20.7",
+        "tailwindcss": "^2.2.16"
+    },
+    "dependencies": {
         "@types/react": "^17.0.24",
-        "astro": "^0.20.7"
+        "classnames": "^2.3.1",
+        "framer-motion": "^4.1.17",
+        "prettier": "^2.4.1"
     }
 }
