@@ -1,4 +1,6 @@
 ---
+import Cursor from '../components/Cursor/Cursor.tsx';
+
 const {title} = Astro.props;
 ---
 
@@ -27,5 +29,7 @@ const {title} = Astro.props;
         </nav>
         <!-- slot: your page content will be injected here. -->
         <slot />
+
+        <Cursor client:load />
     </body>
 </html>

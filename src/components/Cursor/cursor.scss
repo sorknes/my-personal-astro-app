@@ -1,0 +1,13 @@
+@import "../../styles/scss/01-config/config-manifest.scss";
+
+.#{$prefix}-cursor {
+    @apply w-12 h-12 fixed top-0 left-0 rounded-full border border-orange-500 pointer-events-none transition-cursor ease-in-out duration-300 z-9999;
+}
+
+// Add hover effect to custom cursor
+// ----------------------------------------------------------------------------
+.#{$prefix}-cursor--hover {
+    .#{$prefix}-cursor {
+        @apply w-8 h-8 bg-orange-500 bg-opacity-5;
+    }
+}
