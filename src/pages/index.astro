@@ -4,6 +4,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 // Component Imports
 import Tour from '../components/Tour.astro';
 // You can import components from any supported Framework here!
+
+import Test from '../components/Test/Test.tsx';
 ---
 
 <BaseLayout title="Homepage">
@@ -14,6 +16,8 @@ import Tour from '../components/Tour.astro';
                 <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
             </div>
         </header>
+
+        <Test>Test React content - <a href="/">Link</a></Test>
 
         <Tour />
 
