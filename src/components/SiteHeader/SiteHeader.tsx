@@ -1,20 +1,25 @@
 import React from "react";
 import cx from "classnames";
+import { AnimatePresence } from "framer-motion";
 
 import Logo from "../Logo/Logo";
+import Hamburger from "../Hamburger/Hamburger";
+import Nav from "../Nav/Nav";
 
 const SiteHeader = () => {
-    const componentClass = cx(`w-full p-10 flex flex-1 justify-between border-b border-coolGray-200 fixed z-50`);
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const componentClass = cx(`w-full p-10 flex flex-1 justify-between border-b border-coolGray-200 fixed z-40`);
 
     return (
         <header className={componentClass}>
             <Logo />
 
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Posts</a>
-                <a href="#">Contact</a>
-            </nav>
+            <Hamburger isActive={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+
+            <AnimatePresence initial={false}>
+                {isMenuOpen && <Nav animate={isMenuOpen ? "open" : "close"} />}
+            </AnimatePresence>
         </header>
     );
 };
