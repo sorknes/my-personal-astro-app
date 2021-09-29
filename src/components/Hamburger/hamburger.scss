@@ -1,0 +1,89 @@
+@import "../../styles/scss/01-config/config-manifest.scss";
+
+.#{$prefix}-hamburger {
+    @apply flex flex-col justify-between relative;
+
+    &::before {
+        content: "";
+
+        @apply w-8 h-0 absolute right-0 -bottom-6 bg-orange-500 transition-all duration-300;
+    }
+
+    &:hover,
+    &:focus {
+        .#{$prefix}-hamburger__center {
+            @apply w-8;
+        }
+    }
+
+    &:focus {
+        @apply outline-none;
+
+        .#{$prefix}-hamburger__center {
+            @apply bg-orange-500;
+        }
+    }
+}
+
+.#{$prefix}-hamburger--active {
+    @apply z-50;
+
+    &:focus {
+        .#{$prefix}-hamburger__center {
+            @apply w-16 bg-coolGray-50;
+        }
+
+        &::before {
+            @apply h-6;
+        }
+    }
+
+    .#{$prefix}-hamburger__top,
+    .#{$prefix}-hamburger__center,
+    .#{$prefix}-hamburger__bottom {
+        @apply bg-coolGray-50;
+    }
+
+    .#{$prefix}-hamburger__top {
+        transform: rotate(45deg);
+    }
+
+    .#{$prefix}-hamburger__center {
+        @apply w-16 absolute right-1.5;
+    }
+
+    .#{$prefix}-hamburger__bottom {
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        .#{$prefix}-hamburger__center {
+            @apply w-32;
+        }
+    }
+}
+
+.#{$prefix}-hamburger__top,
+.#{$prefix}-hamburger__center,
+.#{$prefix}-hamburger__bottom {
+    @apply h-0.5 relative inline-block bg-coolGray-900 transition-all duration-300;
+}
+
+.#{$prefix}-hamburger__top,
+.#{$prefix}-hamburger__bottom {
+    @apply w-8 origin-center;
+}
+
+.#{$prefix}-hamburger__top {
+    @apply top-0;
+}
+
+.#{$prefix}-hamburger__center {
+    transform: translateY(-50%);
+
+    @apply w-6 absolute top-1/2;
+}
+
+.#{$prefix}-hamburger__bottom {
+    @apply bottom-0;
+}
