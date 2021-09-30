@@ -1,5 +1,6 @@
 @import "../../styles/scss/01-config/config-manifest.scss";
 
+/* hamburger icon */
 .#{$prefix}-hamburger {
     @apply flex flex-col justify-between relative;
 
@@ -25,6 +26,32 @@
     }
 }
 
+.#{$prefix}-hamburger__top,
+.#{$prefix}-hamburger__center,
+.#{$prefix}-hamburger__bottom {
+    @apply h-0.5 relative inline-block bg-coolGray-900 transition-all duration-300;
+}
+
+.#{$prefix}-hamburger__top,
+.#{$prefix}-hamburger__bottom {
+    @apply w-8 origin-center;
+}
+
+.#{$prefix}-hamburger__top {
+    @apply top-0;
+}
+
+.#{$prefix}-hamburger__center {
+    transform: translateY(-50%);
+
+    @apply w-6 absolute top-1/2;
+}
+
+.#{$prefix}-hamburger__bottom {
+    @apply bottom-0;
+}
+
+/* arrow icon */
 .#{$prefix}-hamburger--active {
     @apply z-50;
 
@@ -61,29 +88,4 @@
             @apply w-32;
         }
     }
-}
-
-.#{$prefix}-hamburger__top,
-.#{$prefix}-hamburger__center,
-.#{$prefix}-hamburger__bottom {
-    @apply h-0.5 relative inline-block bg-coolGray-900 transition-all duration-300;
-}
-
-.#{$prefix}-hamburger__top,
-.#{$prefix}-hamburger__bottom {
-    @apply w-8 origin-center;
-}
-
-.#{$prefix}-hamburger__top {
-    @apply top-0;
-}
-
-.#{$prefix}-hamburger__center {
-    transform: translateY(-50%);
-
-    @apply w-6 absolute top-1/2;
-}
-
-.#{$prefix}-hamburger__bottom {
-    @apply bottom-0;
 }
