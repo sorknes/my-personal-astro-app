@@ -23,11 +23,13 @@ const {title} = Astro.props;
     </head>
     
     <body>
-        <Siteheader client:visible />
+        <div tabindex="-1">
+            <Siteheader client:visible />
 
-        <!-- slot: your page content will be injected here. -->
-        <slot />
+            <!-- slot: your page content will be injected here. -->
+            <slot />
 
-        <Cursor client:load />
+            <Cursor client:load />
+        </div>
     </body>
 </html>
