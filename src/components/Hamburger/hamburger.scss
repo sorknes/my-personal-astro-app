@@ -55,13 +55,20 @@
 .#{$prefix}-hamburger--active {
     @apply z-50;
 
+    &:hover,
     &:focus {
         .#{$prefix}-hamburger__center {
-            @apply w-16 bg-coolGray-50;
+            @apply w-32;
+        }
+    }
+
+    &:focus {
+        .#{$prefix}-hamburger__center {
+            @apply bg-coolGray-50;
         }
 
         &::before {
-            @apply h-6;
+            @apply md:h-6;
         }
     }
 
@@ -71,21 +78,24 @@
         @apply bg-coolGray-50;
     }
 
+    .#{$prefix}-hamburger__top,
+    .#{$prefix}-hamburger__bottom {
+        @apply w-4 md:w-8 origin-center;
+    }
+
     .#{$prefix}-hamburger__top {
+        @apply top-1.5 md:top-0;
+
         transform: rotate(45deg);
     }
 
     .#{$prefix}-hamburger__center {
-        @apply w-16 absolute right-1.5;
+        @apply w-16 absolute right-1 md:right-1.5;
     }
 
     .#{$prefix}-hamburger__bottom {
-        transform: rotate(-45deg);
-    }
+        @apply bottom-1.5 md:bottom-0;
 
-    &:hover {
-        .#{$prefix}-hamburger__center {
-            @apply w-32;
-        }
+        transform: rotate(-45deg);
     }
 }
