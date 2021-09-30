@@ -12,12 +12,14 @@ interface IProps {
 }
 
 const Hamburger = ({ isActive, onClick }: IProps) => {
-    const componentClass = cx(`${prefix}-hamburger`, {
-        [`${prefix}-hamburger--active`]: isActive === true,
-    });
-
     return (
-        <button className={componentClass} type="button" onClick={onClick}>
+        <button
+            className={cx(`${prefix}-hamburger`, {
+                [`${prefix}-hamburger--active`]: isActive === true,
+            })}
+            type="button"
+            onClick={onClick}
+        >
             <span className={`${prefix}-hamburger__top`} />
             <span className={`${prefix}-hamburger__center`} />
             <span className={`${prefix}-hamburger__bottom`} />

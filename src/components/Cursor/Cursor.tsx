@@ -55,11 +55,9 @@ const Cursor = () => {
         }
     });
 
-    const componentClass = cx(`${prefix}-cursor`);
-
     return (
         <motion.div
-            className={componentClass}
+            className={cx(`${prefix}-cursor`)}
             style={{
                 translateX: cursorXSpring,
                 translateY: cursorYSpring,

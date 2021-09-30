@@ -6,9 +6,7 @@ interface IProps {
 }
 
 const Button = ({ children }: IProps) => {
-    const componentClass = cx(`text-white bg-coolGray-900`);
-
-    return <div className={componentClass}>{children}</div>;
+    return <div className={cx(`text-white bg-coolGray-900`)}>{children}</div>;
 };
 
 export default Button;

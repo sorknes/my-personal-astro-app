@@ -26,10 +26,14 @@ const Nav = ({ animate }: IProps) => {
         },
     };
 
-    const componentClass = cx(`w-full h-full text-coolGray-50 fixed top-0 left-0 bg-coolGray-900 z-40`);
-
     return (
-        <motion.nav className={componentClass} variants={menuVariants} initial="close" exit="close" animate={animate}>
+        <motion.nav
+            className={cx(`w-full h-full text-coolGray-50 fixed top-0 left-0 bg-coolGray-900 z-40`)}
+            variants={menuVariants}
+            initial="close"
+            exit="close"
+            animate={animate}
+        >
             <ul>
                 <li>
                     <a href="#">Home</a>
