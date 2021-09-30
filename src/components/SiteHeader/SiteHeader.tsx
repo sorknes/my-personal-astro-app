@@ -12,7 +12,7 @@ const SiteHeader = () => {
     return (
         <header
             className={cx(
-                `w-full p-4 md:p-8 lg:p-10 flex flex-1 justify-between border-b border-coolGray-200 fixed z-40`
+                `w-full py-6 px-4 md:p-8 lg:p-10 flex flex-1 justify-between border-b border-coolGray-200 fixed z-40`
             )}
         >
             <Logo />
