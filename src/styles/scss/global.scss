@@ -9,6 +9,10 @@
 // 03. Global styles
 // ----------------------------------------------------------------------------
 @layer base {
+    *:focus {
+        @apply outline-none duration-0;
+    }
+
     html {
         scroll-behavior: smooth;
     }
