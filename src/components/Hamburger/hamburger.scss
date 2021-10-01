@@ -18,10 +18,14 @@
     }
 
     &:focus {
-        @apply outline-none;
-
         .#{$prefix}-hamburger__center {
             @apply bg-orange-500;
+        }
+    }
+
+    &:active {
+        .#{$prefix}-hamburger__center {
+            @apply bg-coolGray-900;
         }
     }
 }
