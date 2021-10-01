@@ -1,0 +1,41 @@
+@import "../../styles/scss/01-config/config-manifest.scss";
+
+.#{$prefix}-logo {
+    @apply text-coolGray-900 relative border-0 duration-0;
+    @apply hover:text-coolGray-900;
+
+    &::before,
+    &::after {
+        content: " ";
+
+        @apply absolute transition-all duration-300;
+    }
+
+    &::before {
+        @apply w-9/12 h-0 bottom-0 left-1/2 bg-orange-400 -z-1;
+    }
+
+    &::after {
+        transform: translateY(calc(-50% + 2px));
+
+        @apply w-0 h-0.5 top-1/2 left-24 bg-black;
+    }
+
+    &:hover {
+        &::after {
+            @apply w-9/12;
+        }
+    }
+
+    &:focus {
+        &::before {
+            @apply h-full;
+        }
+    }
+
+    &:active {
+        &::before {
+            @apply h-0;
+        }
+    }
+}
