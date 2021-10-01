@@ -31,8 +31,12 @@ module.exports = {
             transitionProperty: {
                 cursor: "width, height, background-color",
             },
+            transitionDuration: {
+                0: "0ms",
+            },
             zIndex: {
-                9999: 9999,
+                "-1": "-1",
+                9999: "9999",
             },
         },
     },
