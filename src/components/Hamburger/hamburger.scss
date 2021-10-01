@@ -13,13 +13,13 @@
     &:hover,
     &:focus {
         .#{$prefix}-hamburger__center {
-            @apply w-8;
+            @apply md:w-8;
         }
     }
 
     &:focus {
         .#{$prefix}-hamburger__center {
-            @apply bg-orange-500;
+            @apply md:bg-orange-500;
         }
     }
 
@@ -73,6 +73,12 @@
 
         &::before {
             @apply md:h-6;
+        }
+    }
+
+    &:active {
+        &::before {
+            @apply md:h-0;
         }
     }
 

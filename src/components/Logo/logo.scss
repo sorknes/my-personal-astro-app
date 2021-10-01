@@ -23,13 +23,13 @@
 
     &:hover {
         &::after {
-            @apply w-9/12;
+            @apply md:w-9/12;
         }
     }
 
     &:focus {
         &::before {
-            @apply h-full;
+            @apply md:h-full;
         }
     }
 
