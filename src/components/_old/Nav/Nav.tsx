@@ -2,12 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import cx from "classnames";
 
+import NavList from "./NavList";
+
 interface IProps {
     animate: boolean | string;
 }
 
 const Nav = ({ animate }: IProps) => {
-    const menuVariants = {
+    const variants = {
         open: {
             opacity: 1,
             transition: {
@@ -16,12 +18,13 @@ const Nav = ({ animate }: IProps) => {
                 bounce: 0,
             },
         },
-        close: {
+        closed: {
             opacity: 0,
             transition: {
                 type: "spring",
                 duration: 0.3,
                 bounce: 0,
+                delay: 0.6,
             },
         },
     };
@@ -29,22 +32,12 @@ const Nav = ({ animate }: IProps) => {
     return (
         <motion.nav
             className={cx(`w-full h-full text-coolGray-50 fixed top-0 left-0 bg-coolGray-900 z-40`)}
-            variants={menuVariants}
-            initial="close"
-            exit="close"
+            variants={variants}
+            initial="closed"
+            exit="closed"
             animate={animate}
         >
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Posts</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+            <NavList />
         </motion.nav>
     );
 };

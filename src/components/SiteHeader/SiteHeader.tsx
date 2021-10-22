@@ -1,27 +1,24 @@
 import React from "react";
 import cx from "classnames";
-import { AnimatePresence } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 
-import Logo from "../Logo/Logo";
 import Hamburger from "../Hamburger/Hamburger";
-import Nav from "../Nav/Nav";
 
 const SiteHeader = () => {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [isOpen, toggleOpen] = useCycle(false, true);
 
     return (
-        <header
-            className={cx(
-                `w-full py-6 px-4 md:p-8 lg:p-10 flex flex-1 justify-between border-b border-coolGray-200 fixed z-40`
-            )}
-        >
-            <Logo />
+        <header className={cx(`w-full py-6 md:py-8 lg:py-10 border-b border-coolGray-200 fixed z-40`)}>
+            <motion.div
+                className="container flex justify-between flex-1"
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+            >
+                <div>logo</div>
+                <Hamburger toggle={() => toggleOpen()} />
+            </motion.div>
 
-            <Hamburger isActive={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-
-            <AnimatePresence initial={false}>
-                {isMenuOpen && <Nav animate={isMenuOpen ? "open" : "close"} />}
-            </AnimatePresence>
+            {isOpen && <div>is open!!</div>}
         </header>
     );
 };

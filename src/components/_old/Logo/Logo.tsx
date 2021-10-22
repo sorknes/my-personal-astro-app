@@ -2,7 +2,7 @@ import React from "react";
 import cx from "classnames";
 
 // Utils
-import { prefix } from "../../utils/namespace";
+import { prefix } from "../../../utils/namespace";
 
 import "./logo.scss";
 

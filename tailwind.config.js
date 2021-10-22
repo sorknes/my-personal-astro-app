@@ -5,6 +5,13 @@ module.exports = {
     purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}"],
     // more options here
     theme: {
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: "1rem",
+                md: "2rem",
+            },
+        },
         fontFamily: {
             "pt-sans": ['"PT Sans"', "sans-serif"],
             "playfair-display": ['"Playfair Display"', "serif"],

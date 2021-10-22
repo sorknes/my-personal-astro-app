@@ -1,5 +1,6 @@
 ---
 import Siteheader from '../components/SiteHeader/SiteHeader.tsx';
+import GridLines from '../components/GridLines/GridLines.tsx';
 
 import Cursor from '../components/Cursor/Cursor.tsx';
 
@@ -24,6 +25,7 @@ const {title} = Astro.props;
     
     <body>
         <div tabindex="-1">
+            <GridLines client:visible />
             <Siteheader client:visible />
 
             <!-- slot: your page content will be injected here. -->
