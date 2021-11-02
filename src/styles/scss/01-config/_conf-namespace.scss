@@ -1,0 +1,3 @@
+@use "sass:map";
+
+$prefix: map.get($namespace, "PREFIX");
