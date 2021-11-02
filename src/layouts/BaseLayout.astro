@@ -1,0 +1,37 @@
+---
+import BaseGrid from '../components/BaseGrid/'
+
+import LayoutHeader from '../components/LayoutHeader/'
+
+const {title} = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{title}</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
+    </head>
+    
+    <body>
+        <div tabindex="-1">
+            <LayoutHeader />
+
+            <main>
+                <!-- slot: your page content will be injected here. -->
+                <slot />
+            </main>
+        </div>
+
+        <BaseGrid />
+    </body>
+</html>
