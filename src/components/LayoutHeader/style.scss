@@ -1,0 +1,13 @@
+@import "../../styles/scss/01-config/config-manifest";
+
+.#{$prefix}-header {
+    transform-style: preserve-3d;
+
+    &::before {
+        content: "";
+        transform: translateZ(-1px);
+        // box-shadow: inset 0px 0px 0px 1px rgba(229, 231, 235, var(--tw-border-opacity));
+
+        @apply w-full h-full absolute top-4 -left-4 border-t border-b border-l border-gray-900;
+    }
+}
